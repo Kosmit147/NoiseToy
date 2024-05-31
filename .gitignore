@@ -52,3 +52,12 @@ compile_commands.json
 *creator.user*
 
 *_qmlcache.qrc
+
+# Build Directory
+build/*
+
+# Vim
+Session.vim
+
+# Clangd language server
+.clangd

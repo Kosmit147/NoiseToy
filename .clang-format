@@ -25,7 +25,7 @@ AlignOperands: DontAlign
 BreakBeforeBinaryOperators: NonAssignment
 
 AllowShortBlocksOnASingleLine: Empty
-AllowShortFunctionsOnASingleLine: Empty
+AllowShortFunctionsOnASingleLine: Inline
 
 ColumnLimit: 90
 MaxEmptyLinesToKeep: 1

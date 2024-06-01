@@ -17,7 +17,7 @@ find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
 set(PROJECT_SOURCES
         src/main.cpp
         src/ui/main_window.cpp
-        src/ui/main_window.h
+        src/ui/main_window.hpp
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
@@ -73,3 +73,7 @@ endif()
 set_project_warnings(PROJECT_WARNINGS)
 set_property(TARGET NoiseToy PROPERTY COMPILE_WARNING_AS_ERROR ON)
 target_compile_options(NoiseToy PRIVATE ${PROJECT_WARNINGS})
+
+set(FASTNOISE2_NOISETOOL OFF CACHE BOOL "Build Noise Tool" FORCE)
+add_subdirectory(dependencies/FastNoise2)
+target_link_libraries(NoiseToy PRIVATE FastNoise)
